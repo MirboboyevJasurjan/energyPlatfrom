@@ -24,11 +24,19 @@ nav {
     top: 0;
     bottom: 0;
     height: 100vh;
-    left: -160px;
+    left: -170px;
     background: #fff;
     width: 300px;
     overflow: hidden;
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.navbar_column_btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
 }
 
 nav.activeNav {
@@ -42,7 +50,10 @@ nav ul li a span {
 .logo {
     text-align: center;
     display: flex;
-    margin: 10px 0 0 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
 }
 
 .logo img {
@@ -58,13 +69,21 @@ nav ul li a span {
     text-transform: uppercase;
 }
 
+nav.activeNav ul li a {
+    left: 0;
+}
+
 a {
     position: relative;
     color: rgb(85, 83, 83);
     font-size: 14px;
     display: table;
-    width: 280px;
+    width: 250px;
     padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 nav .fas {
