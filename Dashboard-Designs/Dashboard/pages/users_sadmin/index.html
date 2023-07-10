@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>MyTok</title>
+</head>
+
+<body>
+
+    <div class="container users_sadmin">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="images/logo.png" alt="image logo">
+                    <h2>My<span class="danger">Tok</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="../../index.html">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3>Profil</h3>
+                </a>
+                <a href="./pages/users_sadmin/index.html">
+                    <span class="material-icons-sharp">
+                        receipt_long
+                    </span>
+                    <h3>Foydalanuvchilar</h3>
+                </a>
+                <a href="../balans/index.html" class="active">
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <h3>Balans</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        mail_outline
+                    </span>
+                    <h3>Yangi ishlar</h3>
+                    <span class="message-count">27</span>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Ishchilar ro'yxati</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        map
+                    </span>
+                    <h3>Harita</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>Bo'lim qo'shish</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        person_add
+                    </span>
+                    <h3>User qo'shish</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        settings
+                    </span>
+                    <h3>Sozlamalar</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        report_gmailerrorred
+                    </span>
+                    <h3>Help</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main id="mainUsAd">
+            <div class="forImageBanner">
+                <img id="bannerImage" src="../../images/avatar_person.jfif" alt="For person">
+            </div>
+                    
+            <div class="body_wrapper user_sadmin">
+                <div class="body_container">
+                    <h1>User Management</h1>
+                    <form id="userForm">
+                        <div class="form-group">
+                            <label for="avatar">Avatar:</label>
+                            <div id="dropArea" class="drop-area">
+                                <p>Drag and drop an image or click here to select</p>
+                                <input type="file" id="avatar" name="avatar" accept="image/*">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Enter name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone:</label>
+                            <input type="text" id="phone" name="phone" placeholder="Enter phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="place">Place:</label>
+                            <input type="text" id="place" name="place" placeholder="Enter place" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="role">Role:</label>
+                            <select id="role" name="role" required>
+                                <option value="admin">Admin</option>
+                                <option value="user">User</option>
+                                <option value="worker">Worker</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit">Add User</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <table id="userTable">
+                <thead>
+                    <tr>
+                        <th class="userAvatarTable">Avatar</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Place</th>
+                        <th>Role</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="userTableBody">
+                </tbody>
+            </table>
+
+
+        </main>
+        <!-- End of Main Content -->
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Reza</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img alt="dashboard MyTok" src="images/profile-1.jpg">
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+
+            <div class="user-profile">
+                <div class="logo">
+                    <img alt="dashboard MyTok" src="images/logo.png">
+                    <h2>AsmrProg</h2>
+                    <p>Fullstack Web Developer</p>
+                </div>
+            </div>
+
+            <div class="reminders">
+                <div class="header">
+                    <h2>Reminders</h2>
+                    <span class="material-icons-sharp">
+                        notifications_none
+                    </span>
+                </div>
+
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            volume_up
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Workshop</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            edit
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Workshop</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification add-reminder">
+                    <div>
+                        <span class="material-icons-sharp">
+                            add
+                        </span>
+                        <h3>Add Reminder</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!-- <script src="orders.js"></script> -->
+    <script src="./app.js"></script>
+</body>
+
+</html>

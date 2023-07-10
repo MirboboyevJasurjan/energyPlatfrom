@@ -1,0 +1,14 @@
+{
+  "name": "my-tok",
+  "version": "1.0.0",
+  "description": "Collection of <a href=\"https://youtube.com/#AsmrProg\" target=\"_blank\">AsmrProg</a> Youtube Channel Dashboard Designs Coding Codes!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^4.3.0"
+  }
+}
