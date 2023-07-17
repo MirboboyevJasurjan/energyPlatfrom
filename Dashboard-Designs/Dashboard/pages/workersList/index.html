@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>MyTok Workers list</title>
 </head>
 
@@ -27,7 +28,7 @@
             </div>
 
             <div class="sidebar">
-                <a href="./index.html">
+                <a href="../../index.html">
                     <span class="material-icons-sharp">
                         dashboard
                     </span>
@@ -39,19 +40,19 @@
                     </span>
                     <h3>Profil</h3>
                 </a>
-                <a href="./pages/users_sadmin/index.html">
+                <a href="../users_sadmin/index.html">
                     <span class="material-icons-sharp">
                         receipt_long
                     </span>
                     <h3>Foydalanuvchilar</h3>
                 </a>
-                <a href="./pages/balans/index.html" class="active">
+                <a href="../balans/index.html" class="active">
                     <span class="material-icons-sharp">
                         insights
                     </span>
                     <h3>Balans</h3>
                 </a>
-                <a href="./pages/newWorks/index.html">
+                <a href="#">
                     <span class="material-icons-sharp">
                         mail_outline
                     </span>
@@ -193,17 +194,60 @@
             <!-- Recent Orders Table -->
             <div class="recent-orders">
                 <h2>Recent Orders</h2>
-                <table>
+                <!-- Filter -->
+                <div class="filters">
+                    <label for="gender-filter">Gender:</label>
+                    <select id="gender-filter">
+                        <option value="">All</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+
+                    <label for="age-filter">Age:</label>
+                    <select id="age-filter">
+                        <option value="">All</option>
+                        <option value="below-30">Below 30</option>
+                        <option value="30-50">30-50</option>
+                        <option value="above-50">Above 50</option>
+                    </select>
+
+                    <label for="skill-filter">Skill Level:</label>
+                    <select id="skill-filter">
+                        <option value="">All</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+
+                    <label for="location-filter">Location:</label>
+                    <select id="location-filter">
+                        <option value="">All</option>
+                        <option value="new-york">New York</option>
+                        <option value="london">London</option>
+                        <option value="tokyo">Tokyo</option>
+                    </select>
+
+                    <label for="salary-filter">Salary:</label>
+                    <select id="salary-filter">
+                        <option value="">All</option>
+                        <option value="below-5000">Below $5000</option>
+                        <option value="5000-10000">$5000-$10000</option>
+                        <option value="above-10000">Above $10000</option>
+                    </select>
+                </div>
+                <!-- End of Filter -->
+                <table class="worker-list-container">
                     <thead>
                         <tr>
-                            <th>Course Name</th>
-                            <th>Course Number</th>
-                            <th>Payment</th>
-                            <th>Status</th>
-                            <th></th>
+                            <th>Name</th>
+                            <th>Gender</th>
+                            <th>Age</th>
+                            <th>Skill Level</th>
+                            <th>Location</th>
+                            <th>Salary</th>
                         </tr>
                     </thead>
-                    <tbody></tbody>
+                    <tbody id="worker-list-container"></tbody>
                 </table>
                 <a href="#">Show All</a>
             </div>
@@ -267,7 +311,7 @@
                     <div class="content">
                         <div class="info">
                             <h3>Workshop</h3>
-                            <small class="text_muted">
+                            <small class="text-muted">
                                 08:00 AM - 12:00 PM
                             </small>
                         </div>
@@ -286,7 +330,7 @@
                     <div class="content">
                         <div class="info">
                             <h3>Workshop</h3>
-                            <small class="text_muted">
+                            <small class="text-muted">
                                 08:00 AM - 12:00 PM
                             </small>
                         </div>

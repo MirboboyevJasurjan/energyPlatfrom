@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="../../style.css">
-    <title>MyTok</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>MyTok users in Map</title>
 </head>
 
 <body>
 
-    <div class="container">
+    <div class="container" id="userMapContainer">
         <!-- Sidebar Section -->
         <aside>
             <div class="toggle">
@@ -50,7 +51,7 @@
                     </span>
                     <h3>Balans</h3>
                 </a>
-                <a href="#">
+                <a href="../newWorks/index.html">
                     <span class="material-icons-sharp">
                         mail_outline
                     </span>
@@ -163,7 +164,12 @@
 
             <!-- Recent Orders Table -->
             <div class="recent-orders">
-                <h2>Recent Orders</h2>
+                <h2>Foydalanuvchilar haritada</h2>
+                <button onclick="console.log(200)">Ko'rsatish</button>
+                <br>
+                <button id="getLocationButton">Get Location</button>
+                <div id="map-test" style="width: 600px; height: 400px"></div>
+                <p id="address"></p>
                 <table>
                     <thead>
                         <tr>
@@ -175,116 +181,19 @@
                         </tr>
                     </thead>
                     <tbody></tbody>
-                </table>
-                <!-- <a href="#">Show All</a> -->
+                </table>            
+            
+                
+                
+                
             </div>
             <!-- End of Recent Orders -->
-
         </main>
         <!-- End of Main Content -->
-
-        <!-- Right Section -->
-        <div class="right-section">
-            <div class="nav">
-                <button id="menu-btn">
-                    <span class="material-icons-sharp">
-                        menu
-                    </span>
-                </button>
-                <div class="dark-mode">
-                    <span class="material-icons-sharp active">
-                        light_mode
-                    </span>
-                    <span class="material-icons-sharp">
-                        dark_mode
-                    </span>
-                </div>
-
-                <div class="profile">
-                    <div class="info">
-                        <p>Hey, <b>Reza</b></p>
-                        <small class="text-muted">Admin</small>
-                    </div>
-                    <div class="profile-photo">
-                        <img alt="dashboard MyTok" src="../../images/profile-1.jpg">
-                    </div>
-                </div>
-
-            </div>
-            <!-- End of Nav -->
-
-            <div class="user-profile">
-                <div class="logo">
-                    <img alt="dashboard MyTok" src="../../images/logo.png">
-                    <h2>AsmrProg</h2>
-                    <p>Fullstack Web Developer</p>
-                </div>
-            </div>
-
-            <div class="reminders">
-                <div class="header">
-                    <h2>Reminders</h2>
-                    <span class="material-icons-sharp">
-                        notifications_none
-                    </span>
-                </div>
-
-                <div class="notification">
-                    <div class="icon">
-                        <span class="material-icons-sharp">
-                            volume_up
-                        </span>
-                    </div>
-                    <div class="content">
-                        <div class="info">
-                            <h3>Workshop</h3>
-                            <small class="text_muted">
-                                08:00 AM - 12:00 PM
-                            </small>
-                        </div>
-                        <span class="material-icons-sharp">
-                            more_vert
-                        </span>
-                    </div>
-                </div>
-
-                <div class="notification deactive">
-                    <div class="icon">
-                        <span class="material-icons-sharp">
-                            edit
-                        </span>
-                    </div>
-                    <div class="content">
-                        <div class="info">
-                            <h3>Workshop</h3>
-                            <small class="text_muted">
-                                08:00 AM - 12:00 PM
-                            </small>
-                        </div>
-                        <span class="material-icons-sharp">
-                            more_vert
-                        </span>
-                    </div>
-                </div>
-
-                <div class="notification add-reminder">
-                    <div>
-                        <span class="material-icons-sharp">
-                            add
-                        </span>
-                        <h3>Add Reminder</h3>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-
     </div>
     <script src="./newWorks.js"></script>
-    <!-- <script src="../../orders.js"></script>
-    <script src="../../index.js"></script> -->
+    <script src="./usersMap.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=219f066e-7172-47ea-a5c6-5ef2543c20a7&lang=ru_RU"></script>
 </body>
 
 </html>

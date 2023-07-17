@@ -553,7 +553,7 @@ main .recent-orders a{
         width: 5.6rem;
     }
 
-    aside .sidebar a:last-child{
+    aside .sidebar a:last-child{ 
         position: relative;
         margin-top: 1.8rem;
     }
@@ -570,8 +570,6 @@ main .recent-orders a{
     main .recent-orders {
         width: 94%;
         position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
         margin: 2rem 0 0 0.8rem;
     }
 

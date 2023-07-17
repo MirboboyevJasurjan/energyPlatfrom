@@ -1,0 +1,24 @@
+Project parts ::
+__________________________
+Dashboard:  
+Profil
+Foydalanuvchilar -
+Balans - Chart qoldi
+Yangi ishlar 
+Ishchilar ro'yxati
+Harita - 
+Bo'lim qo'shish
+User qo'shish | Form complete
+Settings
+Login/Register
+Bron modal || page
+___________________________
+Client:
+Landing{
+  Home -
+  About -
+  Services 
+  Comments 
+  Contact 
+}
+
